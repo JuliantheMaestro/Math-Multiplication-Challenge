@@ -2,21 +2,14 @@
 
 
 let multiTable = [];
-let value = 4;
-let counter = 0;
-let cells = 64;
-let rows;
+let value = 15;
 
-
-for (let i = 0; i < cells + 1; i++) {
-    if (counter % 8 === 0) {
-        if (rows != undefined) {
-            multiTable.push(rows);
-        }
-        rows = [];
+for (let i = 0; i < value + 1; i++) {
+    const temp = [];
+    for (let j = 0; j < value + 1; j++) {
+        temp.push(i*j);
     }
-    counter++;
-    let temp = counter;
-    rows.push(temp);
-}
+    multiTable.push(temp);
+};
+
 console.table(multiTable);
